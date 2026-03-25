@@ -1,33 +1,34 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only --exit-child src/server.ts",
-    "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
-    "db:push": "npx prisma db push"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/archiver": "^7.0.0",
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.0",
-    "@types/multer": "^2.1.0",
-    "@types/node": "^22.13.5",
-    "prettier": "^3.5.2",
-    "prisma": "^6.4.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.7.3"
-  },
-  "dependencies": {
-    "@prisma/client": "^6.4.1",
-    "archiver": "^7.0.1",
-    "cors": "^2.8.6",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "multer": "^2.1.1"
-  }
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "ts-node-dev --respawn --transpile-only --exit-child src/server.ts",
+        "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
+        "db:push": "npx prisma db push"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/archiver": "^7.0.0",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.0",
+        "@types/multer": "^2.1.0",
+        "@types/node": "^22.13.5",
+        "prettier": "^3.5.2",
+        "prisma": "^6.4.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.7.3"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.4.1",
+        "archiver": "^7.0.1",
+        "cors": "^2.8.6",
+        "dotenv": "^16.4.7",
+        "express": "^4.22.1",
+        "multer": "^2.1.1",
+        "mysql2": "^3.20.0"
+    }
 }

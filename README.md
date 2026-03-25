@@ -1,78 +1,57 @@
-# Certificate Upload System
+📄 Certificate Manager
 
-A full-stack web application that allows users to upload, manage, download, and delete certificates.
+Full-stack web application for managing certificates with file upload and download functionality.
 
----
+🚀 Features
+Upload certificates with file storage
+View all certificates in a table
+Delete selected certificates (bulk delete)
+Download individual certificates
+Download all certificates as ZIP
+MySQL database integration
+Clean UI using Material UI
+🛠️ Tech Stack
+Backend
+Node.js
+Express
+Prisma ORM
+MySQL
+Multer (file upload)
+Archiver (ZIP export)
+Frontend
+React
+TypeScript
+Material UI
+⚙️ Setup
 
-## Features
+1. Clone project
+   git clone <your-repo-url>
+   cd project
+2. Backend setup
+   cd backend
+   npm install
 
-- Upload certificates (PDF, PNG, JPEG)
-- Display all certificates in a table
-- Download individual certificates
-- Download all certificates as a ZIP file
-- Delete selected certificates (bulk delete)
+Create .env file:
 
----
+DATABASE_URL="mysql://app_user:App123%21@localhost:3306/certificate_db"
 
-## Tech Stack
+Run migrations:
 
-- Frontend: React + TypeScript
-- Backend: Node.js + Express + TypeScript
-- Database: Prisma + SQLite
-- File Upload: Multer
-- ZIP Export: Archiver
+npx prisma migrate dev --name init
 
----
+Start backend:
 
-## Getting Started
+npm run dev
 
-### Prerequisites
+3. Frontend setup
+   cd frontend
+   npm install
+   npm start
+   📌 Notes
+   Files are stored locally in /uploads
+   Database uses MySQL instead of SQLite for scalability
+   Dedicated DB user is used instead of root for security
 
-- Node.js >= v20
-- npm
+👤 Author
 
----
-
-### 1. Backend Setup
-
-cd backend
-npm install
-
-# Run database migrations
-
-npm run db:migrate
-npm run db:push
-
-# Generate Prisma client
-
-npx prisma generate
-
-# Start backend server
-
-npm start
-
-# Frontend setup
-
-cd frontend
-npm install
-
-# Start fontend
-
-npm start
-
-Project Structure
-backend/
-├── controllers/
-├── routes/
-├── middleware/
-├── uploads/
-├── prisma/
-
-frontend/
-├── src/
-├── components/
-
-# Notes
-
-Backend runs on: http://localhost:8080⁠
-Frontend runs on: http://localhost:3000⁠
+Milos
